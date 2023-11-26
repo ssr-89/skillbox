@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  line-height: 1;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+[class*="__container"] {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1366px;
+}

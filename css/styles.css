@@ -15,6 +15,10 @@ body {
   padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -23,6 +27,19 @@ body {
 
 .link {
   text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
   color: inherit;
 }
 

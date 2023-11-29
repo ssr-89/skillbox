@@ -41,10 +41,25 @@ body {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+  cursor: pointer;
 }
 
 [class*=__container] {
   margin: 0 auto;
   padding: 20px;
   max-width: 1366px;
+}
+
+/* HEADER */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

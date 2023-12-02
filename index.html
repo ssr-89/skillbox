@@ -63,9 +63,666 @@
           </div>
         </div>
       </section>
-      <section id="git" class="git">
-        <div class="git__container">
-          <h2 class="git__title title">WoW</h2>
+      <section id="standard" class="standard">
+        <div class="standard__container">
+          <h2 class="standard__title title">Часто используемые команды</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git add .</code> <i>или имя файла</i> — индексирует изменения и даёт возможность откатить изменения.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git commit -m</code> <i>"комментарий"</i>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git push --set-upstream origin dev</code> <i>или</i> <code>-u origin dev</code> — загрузить на сервер файлы (—set-upstream или -u — параметр на всякий случай, чтобы наш репозиторий на компе был связан с репозиторием на удалённом сервере).
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git pull origin</code> <i>наименование ветки</i> — команда для дальнейших загрузок с сервера в без клонирования.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git checkout -b</code> <i>название ветки</i> — создание ветки и переключение на созданную ветку.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git checkout</code> <i>название ветки</i> — переключение между ветками.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="info" class="info">
+        <div class="info__container">
+          <h2 class="info__title title">Информационные команды</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git status</code> — показывает статус файлов в папке.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>ls</code> — посмотреть какие файлы есть в папке, в которой сейчас находимся.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>ls -la</code> — посмотреть ВСЁ содержимое папки.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>pwd</code> — показывает в какой папке находимся.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git show</code> — показывает о последнем commits и его содержимом.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git log</code> — показывает всю историю commits.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git blame</code> — показывает автора коммита.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch</code> — просмотр всех локальных веток в репозитории. Звёздочкой * будет указана текущая ветка.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -a</code> — просмотр всех локальных и удалённых веток. Звёздочкой * будет указана текущая ветка.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git remote -v</code> - путь к настроенному удалённому репозиторию.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git stash list</code> - вывод списка отложенных изменений.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff</code> - просмотр незакомиченных изменений в проекте.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;file&gt;</code> - просмотр незакомиченных изменений в файле.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit&gt;</code> - просмотр всех изменений между указанным коммитом и текущей версией проекта. <i>Можно указать первые четыре цифры номера коммита.</i>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit1&gt; &lt;commit2&gt;</code> - просмотр всех изменений между определёнными коммитами, от наиболее раннего к наиболее позднему.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit1&gt; &lt;commit2&gt; &lt;file&gt;</code> - просмотр изменений в <b>файле</b> между определёнными коммитами, от наиболее раннего к наиболее позднему.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;file1&gt; &lt;file2&gt;</code> - просмотр незакомиченных изменений в нескольких файлах.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git blame &lt;file&gt;</code> - просмотр изменений в каких коммитах, каким пользователем, когда и какие изменения.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="initial" class="initial">
+        <div class="initial__container">
+          <h2 class="initial__title title">Инициализация локального репозитория и подключение к новому удалённому репозиторию</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git init</code> - инициализация Git, где нет Git-репозитория. Создаёт папку с файлами Git.
+              </p>
+            </li>
+            <li>
+              <p>
+                Добавить файл в папку проекта.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git add .</code> - добавить в индекс файл.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git commit -m</code> <i>"комментарий"</i> - добавить в коммит.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git remote add origin</code> <i>"ссылка на новый созданный удалённо репозиторий".</i>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git remote -v</code> - путь к настроенному удалённому репозиторию.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git push -u origin master</code> - добавить в удалённый репозиторий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="remote" class="remote">
+        <div class="remote__container">
+          <h2 class="remote__title title">Подключение к удалённому репозиторию с помощью клонирования</h2>
+          <ul>
+            <li>
+              <code>git clone</code> <i>ссылка на репозиторий</i> — копирование файлов на комп с сервера (подключение к удалённому репозиторию).
+            </li>
+            <li>
+              <p>
+                <code>git add .</code> - добавить в индекс файл.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git commit -m</code> <i>"комментарий"</i> - добавить в коммит.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git push -u origin master</code> - добавить в удалённый репозиторий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="del-path" class="del-path">
+        <div class="del-path__container">
+          <h2 class="del-path__title title">Удаление и изменение пути репозитория</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git remote remove origin</code> - origin имя удалённого репозитория.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git remote add origin</code> <i>"ссылка на новый созданный удалённо репозиторий"</i> - подключение к новому репозиторию.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="branches" class="branches">
+        <div class="branches__container">
+          <h2 class="branches__title title">Ветки</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git branch</code> - просмотр списка всех веток и текущей ветки, отмеченной *
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git checkout -b <i>имя ветки</i></code> - локальное создание ветки и переключение на неё.
+              </p>
+              <p>
+                <b>ВАЖНО!!! После создания локальной ветки необходимо закоммитеть, либо спрятать все изменения, чтобы после переключения к другой ветке не произошёл конфликт версий.</b>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch <i>имя ветки</i></code> - локальное создание ветки.
+              </p>
+              <p>
+                <b>ВАЖНО!!! После создания локальной ветки необходимо закоммитеть, либо спрятать все изменения, чтобы после переключения к другой ветке не произошёл конфликт версий.</b>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git checkout <i>имя ветки</i></code> - переключение на другую ветку.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git merge <i>work</i></code> - слияние веток work -&gt; main. При вводе данной команды необходимо находиться в ветке main.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="conflicts" class="conflicts">
+        <div class="conflicts__container">
+          <h2 class="conflicts__title title">Конфликт версий</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git pull</code> - при лёгком варианте конфликта.
+              </p>
+            </li>
+            <li>
+              <p>
+                При сложном варианте - в редакторе кода выбрать лучший вариант, другие удалить и закоммитеть, а далее запушить.
+              </p>
+            </li>
+          </ul>
+          <p>rejected - отклонено</p>
+          <p>
+            <code>:wq</code> - выход из режима редактирования, например как (END).
+          </p>
+        </div>
+      </section>
+      <section id="delay" class="delay">
+        <div class="delay__container">
+          <h2 class="delay__title title">Откладывание изменений</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git stash</code> - сохранение всех незакоммиченных изменений, в том числе, добавленных в индекс, и присваивается статус WIP.
+              </p>
+              <p>
+                Выводится сообщение: <code>Saved working directory and index state WIP on basket-delivery-options: b2564a5 changed index.html</code>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git stash list</code> - вывод списка отложенных изменений.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git stash pop</code> - возвращение последних отложенных изменений.
+              </p>
+              <p>
+                <i>После возврата происходит слияние с закоммиченными изменениями.</i>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git stash drop 4</code> - удаление отложенных изменений. 4 - означает номер отложенных изменений, который надо удалить.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="models" class="models">
+        <div class="models__container">
+          <h2 class="models__title title">Модели Git</h2>
+          <div class="models__flow model-flow">
+            <h3 class="model-flow__title title">Модель Git Flow</h3>
+            <img src="https://i.ibb.co/TBRcLMY/Git-Flow.png" alt="Git-Flow" border="0">
+            <ul>
+              <li>
+                <p>
+                  <b>Develop (dev, devel)</b> - ветка, в которую вливаются все свежие изменения и проверяется общая работоспособность кода.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Release</b> - после проверки кода в <b>Develop</b>, из которой вливается в <b>Release</b>.
+                </p>
+                <p>
+                  Далее тщательно тестируется и вливается в главную ветку <b>Master</b> или <b>Main</b>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Hotfix (hotfixes)</b> - ветка для быстрых изменений.
+                </p>
+                <p>
+                  Позволяет обходить долгий процесс выкладки изменений.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Feature</b>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="models__tbd model-tbd">
+            <h3 class="model-tbd__title title">Модель TBD (Trunk Based Development)</h3>
+            <img src="https://i.ibb.co/ccVFw1G/TBD.jpg" alt="TBD" border="0">
+            <p>
+              По данной модели создаются отдельные ветки по определённым задачам.
+            </p>
+            <p>
+              После выполнения задачи ветки вливаются в основную ветку и удаляются.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="change" class="change">
+        <div class="change__container">
+          <h2 class="change__title title">Просмотр изменений</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git diff</code> - просмотр незакоммиченных изменений в проекте.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;file&gt;</code> - просмотр незакоммиченных изменений в файле.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit&gt;</code> - просмотр всех изменений между указанным коммитом и текущей версией проекта. <i>Можно указать первые четыре цифры номера коммита.</i>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit1&gt; &lt;commit2&gt;</code> - просмотр всех изменений между определёнными коммитами, от наиболее раннего к наиболее позднему.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;commit1&gt; &lt;commit2&gt; &lt;file&gt;</code> - просмотр изменений в <b>файле</b> между определёнными коммитами, от наиболее раннего к наиболее позднему.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git diff &lt;file1&gt; &lt;file2&gt;</code> - просмотр незакоммиченных изменений в нескольких файлах.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="cancel-com" class="cancel-com">
+        <div class="cancel-com__container">
+          <h2 class="cancel-com__title title">Отмена закоммиченных изменений и удаление незакоммиченных изменений</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git checkout &lt;commit&gt; &lt;file&gt;</code> - отмена закоммиченных изменений и возврат в индекс.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git restore --staged &lt;file&gt;</code> - удаление из индекса и возврат в рабочую директорию.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git restore &lt;file&gt;</code> - удаление незакоммиченных изменений.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git revert &lt;commit&gt;</code> - удаление коммита. <i>Во время удаления будет предложено отредактировать коммит и закоммитеть удаление.</i>
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>CTRL + C</code> - выход из режима редактирования коммита.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git revert --no-commit &lt;commit&gt;</code> - удаление коммита без редактирования, сделав один коммит в конце.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="reset-com" class="reset-com">
+        <div class="reset-com__container">
+          <h2 class="reset-com__title title">Отмена (сброс) коммитов</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git reset --soft &lt;commit&gt;</code> - мягкий режим с параметром soft.
+              </p>
+              <p>
+                Последний коммит будет сброшен до предыдущего и все изменения будут отправлены в индекс.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git reset --mixed &lt;commit&gt;</code> или <code>git reset HEAD~1</code> - смешанный сброс последнего коммита до предыдущего.
+              </p>
+              <p>
+                <code>HEAD~1</code> - цифра означает количество последних коммитов для сброса.
+              </p>
+              <p>
+                Все изменения при этом попадают в рабочую директрию без добавления в индекс.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git reset --hard &lt;commit&gt;</code> - безвозвратное удаление последующих за ним коммитов. Сам коммит будет последним.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git reset --hard HEAD</code> - сбрасывает все изменения в локальном репозитории до последнего коммита и удаляет все незафиксированные изменения.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="answers" class="answers">
+        <div class="answers__container">
+          <h2 class="answers__title title">
+            Вопросы и ответы
+          </h2>
+          <ul>
+            <li>
+              <h4>
+                В какой последовательности при работе с удалённым репозиторием обычно встречаются следующие команды?
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    <code>
+                      git clone ... git push ... git pull
+                    </code>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>
+                      git clone ... git pull ... git push
+                    </code>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                Вы решаете использовать для своих проектов систему GitLab. Какие последовательности команд возможны при работе в этой системе?
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    <code>
+                      git init, git add, git commit, git remote add origin path, git push -u origin master
+                    </code>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>
+                      git remote add origin path, git push -u origin master
+                    </code>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>
+                      git clone path
+                    </code>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>
+                      git init, git remote add origin path, git add, git commit, git push -u origin master
+                    </code>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                С помощью каких команд можно получить свежую версию кода из удалённого репозитория?
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    <code>git pull</code>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>git clone</code>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                Чем различаются команды git checkout -b branch-name и git checkout branch-name?
+              </h4>
+              <p>
+                Параметр -b указывает на необходимость создать ветку и уже потом в неё переключиться.
+              </p>
+            </li>
+            <li>
+              <h4>
+                В каком случае необходимо использовать команду git push -u origin branch-name, а в каком достаточно команды git push?
+              </h4>
+              <p>
+                <code>git push -u origin branch-name</code> выполняется при первой отправке локальной ветки в удалённый репозиторий.
+              </p>
+            </li>
+            <li>
+              <p>Вы последовательно выполняете следующие действия в репозитории:</p>
+              <ol>
+                <li>
+                  <p>
+                    Изменяете файл 1
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Выполняете git stash
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Изменяете файл 2
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Выполняете git stash
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Выполняете git stash pop
+                  </p>
+                </li>
+              </ol>
+              <h4>Изменения в каком файле будут возвращены из stash в рабочую директорию?</h4>
+              <p>
+                В файле 2
+              </p>
+            </li>
+            <li>
+              <h4>
+                Что произойдёт, если программист выполнит следующие команды?
+              </h4>
+              <p>
+                <code>
+                  git checkout branch-1
+                </code>
+              </p>
+              <p>
+                <code>
+                  git merge master
+                </code>
+              </p>
+              <p>
+                Ответ: Ветка master будет влита в ветку branch-1.
+              </p>
+            </li>
+            <li>
+              <h4>
+                При выполнении каких команд могут возникать локальные конфликты слияния?
+              </h4>
+              <ul>
+                <li><code>git merge</code></li>
+                <li><code>git pull</code></li>
+                <li><code>git stash pop</code></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                Чем функционально отличается pull request от merge request?
+              </h4>
+              <p>
+                Ничем.
+              </p>
+            </li>
+            <li>
+              <h4>
+                В чём преимущества модели ветвления trunk-based перед Git Flow?
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    Она предполагает более быструю разработку.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    В ней все ветки, кроме master, «живут» недолго.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Она проще для понимания и использования.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    В ней можно включать и отключать различные фичи, используя feature flags.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

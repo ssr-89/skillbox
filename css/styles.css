@@ -1,4 +1,10 @@
+@charset "UTF-8";
+/* шрифты */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+/* переменные */
+/* миксины */
+/* в vendor прописывается @import "./vendors/normalize.css" или "./vendors/swiper-min.css" */
+/* сбросы и общие настройки */
 html {
   box-sizing: border-box;
 }
@@ -70,4 +76,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.header li {
+  color: red;
 }

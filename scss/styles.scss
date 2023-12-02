@@ -1,65 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  line-height: 1;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 400;
-}
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-.btn {
-  margin: 0;
-  padding: 0;
-  border: none;
-  appearance: none;
-  background: transparent;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-.img {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
-}
-[class*="__container"] {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1366px;
-}
+/* шрифты */
+@import "fonts";
 
-/* HEADER */
-.header {
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-  }
-  &-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-}
+/* переменные */
+@import "vars";
+
+/* миксины */
+@import "mixins";
+
+/* в vendor прописывается @import "./vendors/normalize.css" или "./vendors/swiper-min.css" */
+@import "vendors";
+
+/* сбросы и общие настройки */
+@import "settings";
+
+@import "components/header";

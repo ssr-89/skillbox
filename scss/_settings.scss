@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  line-height: 1;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  appearance: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+[class*="__container"] {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1366px;
+}

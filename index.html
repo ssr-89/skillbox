@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/styles.css" rel="stylesheet">
   <script src="js/app.js" defer></script>
 </head>
 
@@ -13,34 +13,34 @@
   <div id="wrapper" class="wrapper">
     <header id="header" class="header">
       <div class="header__container">
-        <a href="#" class="header__logo link" aria-label="logo">SSR</a>
+        <a class="header__logo link" href="#" aria-label="logo">SSR</a>
         <nav class="header__nav">
           <ul class="header__menu header-menu list">
             <li class="header-menu__item">
-              <a href="#" class="header-menu__link link">
+              <a class="header-menu__link link" href="#">
                 <span>HOME</span>
               </a>
             </li>
             <li class="header-menu__item">
-              <a href="#" class="header-menu__link link">
+              <a class="header-menu__link link" href="#">
                 <span>ABOUT US</span>
               </a>
             </li>
             <li class="header-menu__item">
-              <a href="#" class="header-menu__link link">
+              <a class="header-menu__link link" href="#">
                 <span>SERVICES</span>
               </a>
             </li>
             <li class="header-menu__item">
-              <a href="#" class="header-menu__link link">
+              <a class="header-menu__link link" href="#">
                 <span>CONTACTS</span>
               </a>
             </li>
           </ul>
         </nav>
         <div class="header__search header-search">
-          <form action="#" class="header-search__form" method="post">
-            <input type="text" class="header-search__input input" placeholder="TEXT">
+          <form class="header-search__form" action="#" method="post">
+            <input class="header-search__input input" type="text" placeholder="TEXT">
             <button class="header-search__btn btn" type="submit">SEARCH</button>
           </form>
         </div>
@@ -49,6 +49,9 @@
     <main id="main" class="main">
       <section id="hero" class="hero">
         <div class="hero__container">
+          <button id="hero-burger" class="hero__burger burger btn">
+            <span></span>
+          </button>
           <h1 class="hero__title title">Что такое Git?</h1>
           <div class="hero__block">
             <p>
@@ -61,6 +64,25 @@
               Разработка в <b>Git</b> ориентирована на обеспечение высокой производительности, безопасности и гибкости распределенной системы.
             </p>
           </div>
+          <nav id="hero-menu" class="hero__nav">
+            <ul class="hero__menu hero-menu list">
+              <li class="hero-menu__item">
+                <a class="hero-menu__link js-scroll-link link" href="#">
+                  <span>LINK</span>
+                </a>
+              </li>
+              <li class="hero-menu__item">
+                <a class="hero-menu__link js-scroll-link link" href="#">
+                  <span>LINK</span>
+                </a>
+              </li>
+              <li class="hero-menu__item">
+                <a class="hero-menu__link js-scroll-link link" href="#">
+                  <span>LINK</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </section>
       <section id="standard" class="standard">
@@ -316,6 +338,21 @@
                 <code>git merge <i>work</i></code> - слияние веток work -&gt; main. При вводе данной команды необходимо находиться в ветке main.
               </p>
             </li>
+            <li>
+              <p>
+                <code>git branch -m &lt;new name branch&gt;</code> - переименование ветки.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -d &lt;branch&gt;</code> - удаление ветки. Перед этим её необходимо влить в другую ветку.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -D &lt;branch&gt;</code> - удаление ветки без вливания в другую ветку.
+              </p>
+            </li>
           </ul>
         </div>
       </section>
@@ -332,12 +369,17 @@
               <p>
                 При сложном варианте - в редакторе кода выбрать лучший вариант, другие удалить и закоммитеть, а далее запушить.
               </p>
+              <p>rejected - отклонено</p>
+              <p>
+                <code>:wq</code> - выход из режима редактирования, например как (END).
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git merge --abort</code> - отмена слияния при конфликте версий.
+              </p>
             </li>
           </ul>
-          <p>rejected - отклонено</p>
-          <p>
-            <code>:wq</code> - выход из режима редактирования, например как (END).
-          </p>
         </div>
       </section>
       <section id="delay" class="delay">
@@ -491,6 +533,11 @@
                 <code>git revert --no-commit &lt;commit&gt;</code> - удаление коммита без редактирования, сделав один коммит в конце.
               </p>
             </li>
+            <li>
+              <p>
+                <code>git reset --hard</code> - удаление всех незакоммиченных изменений, в том числе, которые были добавлены в индекс из проекта.
+              </p>
+            </li>
           </ul>
         </div>
       </section>
@@ -530,16 +577,48 @@
           </ul>
         </div>
       </section>
+      <section id="cancel-merge" class="cancel-merge">
+        <div class="cancel-merge__container">
+          <h2 class="cancel-merge__title title">Отмена слияний, переименование и удаление веток</h2>
+          <ul>
+            <li>
+              <p>
+                <code>git reset --merge &lt;commit&gt;</code> - отмена слияния до коммита, который был до слияния.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git merge --abort</code> - отмена слияния при конфликте версий.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -m &lt;new name branch&gt;</code> - переименование ветки.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -d &lt;branch&gt;</code> - удаление ветки. Перед этим её необходимо влить в другую ветку.
+              </p>
+            </li>
+            <li>
+              <p>
+                <code>git branch -D &lt;branch&gt;</code> - удаление ветки без вливания в другую ветку.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section id="answers" class="answers">
         <div class="answers__container">
           <h2 class="answers__title title">
             Вопросы и ответы
           </h2>
-          <ul>
+          <ol>
             <li>
-              <h4>
+              <h3>
                 В какой последовательности при работе с удалённым репозиторием обычно встречаются следующие команды?
-              </h4>
+              </h3>
               <ul>
                 <li>
                   <p>
@@ -558,9 +637,9 @@
               </ul>
             </li>
             <li>
-              <h4>
+              <h3>
                 Вы решаете использовать для своих проектов систему GitLab. Какие последовательности команд возможны при работе в этой системе?
-              </h4>
+              </h3>
               <ul>
                 <li>
                   <p>
@@ -593,9 +672,9 @@
               </ul>
             </li>
             <li>
-              <h4>
+              <h3>
                 С помощью каких команд можно получить свежую версию кода из удалённого репозитория?
-              </h4>
+              </h3>
               <ul>
                 <li>
                   <p>
@@ -610,17 +689,17 @@
               </ul>
             </li>
             <li>
-              <h4>
+              <h3>
                 Чем различаются команды git checkout -b branch-name и git checkout branch-name?
-              </h4>
+              </h3>
               <p>
                 Параметр -b указывает на необходимость создать ветку и уже потом в неё переключиться.
               </p>
             </li>
             <li>
-              <h4>
+              <h3>
                 В каком случае необходимо использовать команду git push -u origin branch-name, а в каком достаточно команды git push?
-              </h4>
+              </h3>
               <p>
                 <code>git push -u origin branch-name</code> выполняется при первой отправке локальной ветки в удалённый репозиторий.
               </p>
@@ -654,15 +733,15 @@
                   </p>
                 </li>
               </ol>
-              <h4>Изменения в каком файле будут возвращены из stash в рабочую директорию?</h4>
+              <h3>Изменения в каком файле будут возвращены из stash в рабочую директорию?</h3>
               <p>
                 В файле 2
               </p>
             </li>
             <li>
-              <h4>
+              <h3>
                 Что произойдёт, если программист выполнит следующие команды?
-              </h4>
+              </h3>
               <p>
                 <code>
                   git checkout branch-1
@@ -678,9 +757,9 @@
               </p>
             </li>
             <li>
-              <h4>
+              <h3>
                 При выполнении каких команд могут возникать локальные конфликты слияния?
-              </h4>
+              </h3>
               <ul>
                 <li><code>git merge</code></li>
                 <li><code>git pull</code></li>
@@ -688,17 +767,17 @@
               </ul>
             </li>
             <li>
-              <h4>
+              <h3>
                 Чем функционально отличается pull request от merge request?
-              </h4>
+              </h3>
               <p>
                 Ничем.
               </p>
             </li>
             <li>
-              <h4>
+              <h3>
                 В чём преимущества модели ветвления trunk-based перед Git Flow?
-              </h4>
+              </h3>
               <ul>
                 <li>
                   <p>
@@ -722,7 +801,68 @@
                 </li>
               </ul>
             </li>
-          </ul>
+            <li>
+              <h3>Что будет выведено в результате выполнения команды: <code>git diff &lt;commit1&gt; &lt;commit2&gt;</code></h3>
+              <p>
+                Все изменения, произошедшие в проекте в commit2 относительно commit1.
+              </p>
+              <p>
+                Команда <code>git diff</code> при указании ей в качестве параметров хэшей двух коммитов выводит все изменения, сделанные после первого коммита до второго включительно
+              </p>
+            </li>
+            <li>
+              <h3>С помощью какой команды можно просмотреть авторов каждой строчки кода в файле?</h3>
+              <p>
+                <code>git blame &lt;file&gt;</code>
+              </p>
+            </li>
+            <li>
+              <h3>Какие незакоммиченные изменения не удаляет команда git reset --hard?</h3>
+              <p>
+                Изменения, которые не отслеживаются Git`ом.
+              </p>
+            </li>
+            <li>
+              <h3>В рабочей директории один файл изменили и добавили в индекс, но ещё не закоммитили. Как можно отменить все сделанные в нём изменения?</h3>
+              <ul>
+                <li>
+                  <p>
+                    <code>git reset --hard</code> - отменяет все незакоммиченные изменения, в том числе, добавленные в индекс, кроме неотслеживаемых изменений.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Сначала команда <code>git restore --staged</code>
+                    &lt;file&gt;, затем команда <code>git restore &lt;file&gt;</code>. Команда <code>git restore --staged</code> с параметром <code>--staged</code> возвращает файл из индекса в рабочую директорию. Без параметра — возвращает изменённый файл к исходному состоянию.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Как можно вернуть файл к состоянию, в котором он был в определённом коммите?</h3>
+              <p>
+                <code>git checkout &lt;commit&gt; &lt;file&gt;</code>
+              </p>
+            </li>
+            <li>
+              <h3>Чем различаются команды <code>git reset --mixed &lt;commit&gt;</code> и <code>git reset --soft &lt;commit&gt;</code>?</h3>
+              <p>
+                Первая команда отменяет коммиты вплоть до указанного и возвращает все изменения в рабочую директорию, вторая — возвращает их в индекс.
+              </p>
+            </li>
+            <li>
+              <h3>Чем различаются следующие команды? <code>git reset --merge &lt;commit&gt;</code> и <code>git merge --abort</code></h3>
+              <p>
+                Команда "git reset --merge" сбрасывает только закоммиченные изменения, а с помощью команды "git merge --abort" можно откатить неудачный merge, в котором произошёл конфликт.
+              </p>
+            </li>
+            <li>
+              <h4>Почему может не выполниться команда <code>git branch -d &lt;branch&gt;</code> при попытке удалить ненужную недавно созданную ветку?</h4>
+              <p>
+                Потому что коммиты этой ветки не влиты ни в какую другую ветку.
+              </p>
+            </li>
+          </ol>
         </div>
       </section>
     </main>
